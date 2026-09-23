@@ -1,0 +1,1506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bhram by United Chemical Industries - premium herbal wellness inspired by nature and refined by modern quality standards.">
+  <title>UCI Bhram | United Chemical Industries</title>
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <style>
+    :root {
+      --ink: #14241f;
+      --forest: #0d3327;
+      --leaf: #1f7a57;
+      --leaf-soft: #e8f3ec;
+      --gold: #c89a2f;
+      --gold-soft: #fff5d8;
+      --paper: #fbfaf6;
+      --cream: #f1eadb;
+      --muted: #61706a;
+      --line: rgba(20, 36, 31, 0.12);
+      --white: #ffffff;
+      --shadow: 0 24px 60px rgba(13, 51, 39, 0.15);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+
+    h1, h2, h3, h4, h5, h6 {
+      color: var(--ink);
+      font-weight: 780;
+      letter-spacing: 0;
+      line-height: 1.05;
+    }
+
+    p { color: var(--muted); }
+
+    .container {
+      width: min(1140px, calc(100% - 32px));
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .section { padding: clamp(64px, 9vw, 112px) 0; }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--leaf);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 28px;
+      height: 2px;
+      background: var(--gold);
+      border-radius: 10px;
+    }
+
+    .section-title {
+      max-width: 760px;
+      margin: 0;
+      font-size: clamp(1.25rem, 2.8vw, 4rem);
+    }
+
+    .section-copy {
+      max-width: 680px;
+      margin-top: 18px;
+      font-size: 1.05rem;
+    }
+
+    .btn-brand {
+      --bs-btn-color: #11251e;
+      --bs-btn-bg: var(--gold);
+      --bs-btn-border-color: var(--gold);
+      --bs-btn-hover-color: #11251e;
+      --bs-btn-hover-bg: #dfb24c;
+      --bs-btn-hover-border-color: #dfb24c;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 48px;
+      padding: 0.78rem 1.35rem;
+      border-radius: 999px;
+      font-weight: 800;
+      box-shadow: 0 12px 26px rgba(200, 154, 47, 0.28);
+    }
+
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 48px;
+      padding: 0.78rem 1.35rem;
+      color: var(--forest);
+      border: 1px solid rgba(13, 51, 39, 0.22);
+      border-radius: 999px;
+      font-weight: 800;
+      background: rgba(255, 255, 255, 0.72);
+      transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+    }
+
+    .btn-ghost:hover {
+      transform: translateY(-2px);
+      border-color: var(--leaf);
+      background: var(--white);
+    }
+
+    .site-nav {
+      position: fixed;
+      inset: 0 0 auto;
+      z-index: 1000;
+      padding: 14px 0;
+      background: rgba(251, 250, 246, 0.86);
+      border-bottom: 1px solid rgba(20, 36, 31, 0.08);
+      backdrop-filter: blur(16px);
+    }
+
+    .navbar-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+      color: var(--forest);
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+
+    .brand-logo {
+      display: block;
+      width: 118px;
+      height: 54px;
+      object-fit: cover;
+      object-position: center 47%;
+      background: var(--white);
+      border: 1px solid rgba(13, 51, 39, 0.1);
+      border-radius: 8px;
+      padding: 0;
+      flex: 0 0 auto;
+    }
+
+    .brand-name { display: block; font-size: 1.08rem; line-height: 1; }
+
+    .brand-subtitle {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .nav-link {
+      color: #31443d;
+      font-size: 0.94rem;
+      font-weight: 760;
+      border-radius: 999px;
+      padding: 0.55rem 0.9rem !important;
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: var(--forest);
+      background: var(--leaf-soft);
+    }
+
+    .navbar-toggler {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 0.55rem 0.72rem;
+    }
+
+    .back-to-top {
+      position: fixed;
+      right: 22px;
+      bottom: 24px;
+      z-index: 1100;
+      display: grid;
+      place-items: center;
+      width: 52px;
+      height: 52px;
+      color: var(--forest);
+      background: var(--gold);
+      border: 0;
+      border-radius: 50%;
+      box-shadow: 0 16px 34px rgba(13, 51, 39, 0.22);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(12px);
+      transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease, background 0.2s ease;
+    }
+
+    .back-to-top:hover {
+      background: #dfb24c;
+      transform: translateY(8px);
+    }
+
+    .back-to-top.is-visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .back-to-top i { font-size: 1.35rem; }
+
+    .hero {
+      position: relative;
+      min-height: 620px;
+      padding: 104px 0 52px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background:
+        linear-gradient(90deg, rgba(251, 250, 246, 0.98) 0%, rgba(251, 250, 246, 0.9) 44%, rgba(251, 250, 246, 0.22) 74%),
+        url("Home Page.png") center right / cover no-repeat;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 160px;
+      background: linear-gradient(180deg, rgba(251, 250, 246, 0), var(--paper));
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: minmax(0, 680px);
+      gap: 0;
+      align-items: center;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 650px;
+    }
+
+    .hero-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 13px;
+      color: var(--forest);
+      background: rgba(255, 255, 255, 0.76);
+      border: 1px solid rgba(200, 154, 47, 0.45);
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 850;
+      box-shadow: 0 12px 34px rgba(13, 51, 39, 0.08);
+    }
+
+    .hero-kicker i { color: var(--gold); }
+
+    .hero h1 {
+      margin: 20px 0 16px;
+      font-size: clamp(2.55rem, 5.4vw, 4.65rem);
+      line-height: 1;
+    }
+
+    .hero h1 span { display: block; color: var(--leaf); }
+
+    .hero-lead {
+      max-width: 570px;
+      margin: 0 0 22px;
+      color: #455852;
+      font-size: clamp(0.96rem, 1.6vw, 1.08rem);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .hero-metrics {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      max-width: 610px;
+      margin-top: 24px;
+    }
+
+    .metric {
+      padding: 13px 14px;
+      background: rgba(255, 255, 255, 0.76);
+      border: 1px solid rgba(13, 51, 39, 0.1);
+      border-radius: 8px;
+      box-shadow: 0 16px 36px rgba(13, 51, 39, 0.08);
+    }
+
+    .metric strong {
+      display: block;
+      color: var(--forest);
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      line-height: 1;
+    }
+
+    .metric span {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 0.82rem;
+      font-weight: 760;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .trust-strip {
+      position: relative;
+      z-index: 3;
+      margin-top: -30px;
+    }
+
+    .trust-panel {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      background: var(--forest);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .trust-item {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      padding: 22px;
+      min-height: 96px;
+      border-right: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .trust-item:last-child { border-right: 0; }
+
+    .trust-item i {
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      color: var(--gold);
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 50%;
+      flex: 0 0 auto;
+      font-size: 1.25rem;
+    }
+
+    .trust-item strong {
+      display: block;
+      color: var(--white);
+      font-size: 0.98rem;
+      line-height: 1.2;
+    }
+
+    .trust-item span {
+      display: block;
+      margin-top: 4px;
+      color: rgba(255, 255, 255, 0.66);
+      font-size: 0.86rem;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(340px, 0.95fr);
+      gap: clamp(28px, 5vw, 72px);
+      align-items: center;
+    }
+
+    .product-card {
+      position: relative;
+      padding: clamp(20px, 3vw, 34px);
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.82), rgba(232, 243, 236, 0.8)), var(--leaf-soft);
+      border: 1px solid rgba(31, 122, 87, 0.16);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .product-card img {
+      width: min(620px, 100%);
+      margin: 0 auto;
+      border-radius: 8px;
+      filter: drop-shadow(0 26px 32px rgba(13, 51, 39, 0.18));
+    }
+
+    .floating-badge {
+      position: absolute;
+      right: 22px;
+      top: 22px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 13px;
+      color: var(--forest);
+      background: rgba(255, 255, 255, 0.88);
+      border: 1px solid rgba(200, 154, 47, 0.4);
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 850;
+      box-shadow: 0 12px 26px rgba(13, 51, 39, 0.12);
+    }
+
+    .feature-list {
+      display: grid;
+      gap: 14px;
+      margin: 30px 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .feature-list li {
+      display: grid;
+      grid-template-columns: 40px 1fr;
+      gap: 14px;
+      align-items: start;
+      color: #31443d;
+    }
+
+    .feature-list i {
+      display: grid;
+      place-items: center;
+      width: 40px;
+      height: 40px;
+      color: var(--leaf);
+      background: var(--leaf-soft);
+      border-radius: 50%;
+      font-size: 1.12rem;
+    }
+
+    .feature-list strong {
+      display: block;
+      color: var(--ink);
+      font-size: 1.03rem;
+    }
+
+    .feature-list span {
+      display: block;
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .benefit-band { background: var(--forest); color: var(--white); }
+    .benefit-band .eyebrow, .benefit-band h2, .benefit-band p { color: var(--white); }
+    .benefit-band .section-copy { color: rgba(255, 255, 255, 0.72); }
+
+    .benefit-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 42px;
+    }
+
+    .benefit-card {
+      min-height: 270px;
+      padding: 24px;
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 8px;
+      transition: transform 0.2s ease, background 0.2s ease;
+      cursor: pointer;
+    }
+
+    .benefit-card:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .clickable-section,
+    .product-card,
+    .benefit-card,
+    .process-card,
+    .gallery-item,
+    .feature-list li,
+    .quality-point,
+    .contact-row {
+      cursor: pointer;
+    }
+
+    .section-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 2000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity 0.2s ease, visibility 0.2s ease;
+    }
+
+    .section-modal.is-open {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    .section-modal-backdrop {
+      position: absolute;
+      inset: 0;
+      background: rgba(9, 20, 17, 0.68);
+      backdrop-filter: blur(3px);
+    }
+
+    .section-modal-dialog {
+      position: relative;
+      z-index: 1;
+      width: min(760px, calc(100vw - 32px));
+      background: var(--white);
+      border: 1px solid rgba(20, 36, 31, 0.12);
+      border-radius: 18px;
+      box-shadow: 0 30px 80px rgba(9, 20, 17, 0.28);
+      padding: 26px 26px 18px;
+    }
+
+    .section-modal-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 18px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-modal-icon {
+      display: grid;
+      place-items: center;
+      width: 58px;
+      height: 58px;
+      color: var(--leaf);
+      background: var(--leaf-soft);
+      border-radius: 50%;
+      font-size: 1.5rem;
+      flex: 0 0 auto;
+    }
+
+    .section-modal-kicker {
+      margin-bottom: 4px;
+      color: var(--leaf);
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.10em;
+    }
+
+    .section-modal-header h3 {
+      margin: 0;
+      font-size: clamp(1.5rem, 2.3vw, 2.3rem);
+      line-height: 1.1;
+      color: var(--ink);
+    }
+
+    .section-modal-body p {
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.75;
+    }
+
+    .section-modal-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 10px;
+    }
+
+    .section-modal-list li {
+      display: grid;
+      grid-template-columns: 20px 1fr;
+      gap: 10px;
+      align-items: start;
+      padding: 10px 0;
+      border-top: 1px solid rgba(20, 36, 31, 0.06);
+      color: var(--ink);
+      font-size: 0.98rem;
+      line-height: 1.5;
+    }
+
+    .section-modal-list i {
+      color: var(--gold);
+      font-size: 0.94rem;
+      margin-top: 2px;
+    }
+
+    .section-modal-close {
+      position: absolute;
+      top: 16px;
+      right: 18px;
+      width: 36px;
+      height: 36px;
+      border: 0;
+      border-radius: 50%;
+      background: rgba(20, 36, 31, 0.06);
+      color: var(--ink);
+      font-size: 1.5rem;
+      line-height: 1;
+    }
+
+    body.modal-open {
+      overflow: hidden;
+    }
+
+    .benefit-card i {
+      display: grid;
+      place-items: center;
+      width: 50px;
+      height: 50px;
+      margin-bottom: 28px;
+      color: var(--gold);
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 50%;
+      font-size: 1.35rem;
+    }
+
+    .benefit-card h3 { color: var(--white); font-size: 1.16rem; line-height: 1.18; }
+    .benefit-card p { margin: 12px 0 0; color: rgba(255, 255, 255, 0.68); font-size: 0.94rem; }
+
+    .about { background: linear-gradient(180deg, var(--paper), #f5f2e9); }
+
+    .about-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+      gap: clamp(30px, 6vw, 82px);
+      align-items: center;
+    }
+
+    .about-visual {
+      position: relative;
+      min-height: 580px;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      background: var(--cream);
+    }
+
+    .about-visual img {
+      width: 100%;
+      height: 100%;
+      min-height: 580px;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .about-stamp {
+      position: absolute;
+      left: 22px;
+      bottom: 22px;
+      width: min(290px, calc(100% - 44px));
+      padding: 18px;
+      color: var(--white);
+      background: rgba(13, 51, 39, 0.9);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 8px;
+      backdrop-filter: blur(12px);
+    }
+
+    .about-stamp strong { display: block; color: var(--gold); font-size: 2rem; line-height: 1; }
+    .about-stamp span { display: block; margin-top: 8px; color: rgba(255, 255, 255, 0.74); font-size: 0.9rem; }
+
+    .quality-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .quality-point {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      min-height: 70px;
+      padding: 16px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+
+    .quality-point i { color: var(--gold); font-size: 1.25rem; }
+    .quality-point span { color: #31443d; font-weight: 780; }
+
+    .manufacturing {
+      background:
+        linear-gradient(180deg, #fffaf0 0%, var(--paper) 48%, var(--leaf-soft) 100%);
+    }
+
+    .manufacturing-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+      gap: clamp(28px, 5vw, 70px);
+      align-items: center;
+    }
+
+    .manufacturing-visual {
+      display: grid;
+      grid-template-columns: 1fr 0.78fr;
+      grid-template-rows: 260px 230px;
+      gap: 14px;
+      min-height: 504px;
+    }
+
+    .honey-photo {
+      position: relative;
+      overflow: hidden;
+      margin: 0;
+      border: 1px solid rgba(200, 154, 47, 0.22);
+      border-radius: 8px;
+      background: var(--gold-soft);
+      box-shadow: 0 18px 46px rgba(13, 51, 39, 0.12);
+    }
+
+    .honey-photo:first-child { grid-row: span 2; }
+
+    .honey-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.45s ease;
+    }
+
+    .honey-photo:hover img { transform: scale(1.04); }
+
+    .honey-photo figcaption {
+      position: absolute;
+      left: 14px;
+      right: 14px;
+      bottom: 14px;
+      padding: 12px 14px;
+      color: var(--white);
+      background: rgba(13, 51, 39, 0.84);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 8px;
+      backdrop-filter: blur(12px);
+      font-size: 0.88rem;
+      font-weight: 800;
+    }
+
+    .manufacturing-copy .feature-list { margin-bottom: 0; }
+
+    .manufacturing-note {
+      display: grid;
+      grid-template-columns: 46px 1fr;
+      gap: 14px;
+      align-items: center;
+      margin-top: 26px;
+      padding: 18px;
+      background: var(--white);
+      border: 1px solid rgba(200, 154, 47, 0.28);
+      border-radius: 8px;
+      box-shadow: 0 16px 38px rgba(13, 51, 39, 0.07);
+    }
+
+    .manufacturing-note i {
+      display: grid;
+      place-items: center;
+      width: 46px;
+      height: 46px;
+      color: var(--forest);
+      background: var(--gold-soft);
+      border-radius: 50%;
+      font-size: 1.2rem;
+    }
+
+    .manufacturing-note strong {
+      display: block;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+
+    .manufacturing-note span {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .gallery-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 36px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr 0.8fr;
+      grid-auto-rows: 290px;
+      gap: 14px;
+    }
+
+    .gallery-item {
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--leaf-soft);
+      border: 1px solid rgba(13, 51, 39, 0.08);
+      margin: 0;
+    }
+
+    .gallery-item:first-child { grid-row: span 2; }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.45s ease;
+    }
+
+    .gallery-item:hover img { transform: scale(1.04); }
+
+    .gallery-caption {
+      position: absolute;
+      left: 18px;
+      right: 18px;
+      bottom: 18px;
+      padding: 14px 16px;
+      color: var(--white);
+      background: rgba(13, 51, 39, 0.86);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 8px;
+      backdrop-filter: blur(12px);
+    }
+
+    .gallery-caption strong { display: block; line-height: 1.2; }
+    .gallery-caption span { display: block; margin-top: 4px; color: rgba(255, 255, 255, 0.72); font-size: 0.86rem; }
+
+    .process { background: var(--leaf-soft); }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 38px;
+    }
+
+    .process-card {
+      padding: 28px;
+      background: var(--white);
+      border: 1px solid rgba(13, 51, 39, 0.1);
+      border-radius: 8px;
+      box-shadow: 0 16px 42px rgba(13, 51, 39, 0.08);
+    }
+
+    .process-number {
+      display: inline-grid;
+      place-items: center;
+      width: 44px;
+      height: 44px;
+      margin-bottom: 38px;
+      color: var(--forest);
+      background: var(--gold-soft);
+      border-radius: 50%;
+      font-weight: 900;
+    }
+
+    .process-card h3 { font-size: 1.2rem; margin-bottom: 10px; }
+    .process-card p { margin: 0; font-size: 0.95rem; }
+
+    .contact { background: var(--paper); }
+
+    .contact-panel {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 0;
+      overflow: hidden;
+      background: var(--forest);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+
+    .contact-copy { padding: clamp(28px, 5vw, 58px); }
+    .contact-copy .eyebrow, .contact-copy h2, .contact-copy p { color: var(--white); }
+    .contact-copy .section-copy { color: rgba(255, 255, 255, 0.72); }
+
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .contact-actions .btn-ghost {
+      color: var(--white);
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.22);
+    }
+
+    .contact-details {
+      display: grid;
+      gap: 1px;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .contact-row {
+      display: grid;
+      grid-template-columns: 56px 1fr;
+      gap: 16px;
+      align-items: center;
+      padding: 28px;
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .contact-row i {
+      display: grid;
+      place-items: center;
+      width: 50px;
+      height: 50px;
+      color: var(--gold);
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 50%;
+      font-size: 1.22rem;
+    }
+
+    .contact-row strong { display: block; color: var(--white); font-size: 1rem; }
+    .contact-row span, .contact-row a { display: block; margin-top: 4px; color: rgba(255, 255, 255, 0.72); font-size: 0.95rem; }
+
+    .site-footer {
+      padding: 46px 0 28px;
+      color: rgba(255, 255, 255, 0.7);
+      background: #091c16;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 0.65fr 0.65fr;
+      gap: 32px;
+      align-items: start;
+    }
+
+    .footer-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--white);
+      font-weight: 900;
+      margin-bottom: 16px;
+    }
+
+    .footer-brand .brand-logo {
+      width: 126px;
+      height: 58px;
+      border-color: rgba(255, 255, 255, 0.16);
+    }
+
+    .site-footer p { max-width: 430px; color: rgba(255, 255, 255, 0.66); }
+    .site-footer h3 { color: var(--white); font-size: 1rem; margin-bottom: 14px; }
+
+    .footer-links {
+      display: grid;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .footer-links a { color: rgba(255, 255, 255, 0.66); }
+    .footer-links a:hover { color: var(--gold); }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      margin-top: 36px;
+      padding-top: 22px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      color: rgba(255, 255, 255, 0.52);
+      font-size: 0.9rem;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 991.98px) {
+      .site-nav { background: rgba(251, 250, 246, 0.96); }
+
+      .navbar-collapse {
+        margin-top: 14px;
+        padding: 12px;
+        background: var(--white);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        box-shadow: 0 18px 40px rgba(13, 51, 39, 0.08);
+      }
+
+      .hero {
+        min-height: auto;
+        padding-top: 102px;
+        padding-bottom: 42px;
+        background:
+          linear-gradient(180deg, rgba(251, 250, 246, 0.98) 0%, rgba(251, 250, 246, 0.86) 58%, rgba(251, 250, 246, 0.98) 100%),
+          url("Home Page.png") center bottom / auto 56% no-repeat;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      .hero-content { max-width: 720px; }
+
+      .trust-panel, .benefit-grid, .process-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .trust-item:nth-child(2) { border-right: 0; }
+      .product-grid, .about-layout, .manufacturing-layout, .contact-panel { grid-template-columns: 1fr; }
+      .about-visual, .about-visual img { min-height: 420px; }
+      .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .gallery-item:first-child { grid-row: span 1; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .footer-grid > :first-child { grid-column: 1 / -1; }
+    }
+
+    @media (max-width: 767.98px) {
+      .container { width: min(100% - 24px, 1140px); }
+      .brand-subtitle { display: none; }
+      .hero {
+        padding-top: 92px;
+        padding-bottom: 34px;
+        background:
+          linear-gradient(180deg, rgba(251, 250, 246, 0.99) 0%, rgba(251, 250, 246, 0.9) 55%, rgba(251, 250, 246, 0.99) 100%),
+          url("Home Page.png") center bottom / auto 42% no-repeat;
+      }
+      .hero h1 { font-size: clamp(2.25rem, 10.5vw, 3.35rem); }
+      .hero-lead { margin-bottom: 18px; }
+      .hero-metrics, .trust-panel, .benefit-grid, .quality-grid, .process-grid, .gallery, .footer-grid { grid-template-columns: 1fr; }
+      .metric, .trust-item, .benefit-card, .process-card { min-height: auto; }
+      .manufacturing-visual {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, minmax(230px, 62vw));
+        min-height: auto;
+      }
+      .honey-photo:first-child { grid-row: span 1; }
+      .trust-item { border-right: 0; border-bottom: 1px solid rgba(255, 255, 255, 0.12); }
+      .trust-item:last-child { border-bottom: 0; }
+      .product-grid { gap: 28px; }
+      .floating-badge { position: static; margin-bottom: 14px; }
+      .gallery { grid-auto-rows: minmax(260px, 66vw); }
+      .contact-row { grid-template-columns: 44px 1fr; padding: 22px; }
+      .contact-row i { width: 44px; height: 44px; }
+      .footer-bottom { display: grid; }
+      .back-to-top {
+        right: 14px;
+        bottom: 16px;
+        width: 48px;
+        height: 48px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg site-nav" id="siteNav">
+    <div class="container">
+      <a class="navbar-brand" href="#home" aria-label="UCI Bhram home">
+        <img class="brand-logo" src="UCI Logo.jpg" alt="United Chemical Industries logo">
+        <span>
+          <span class="brand-name">Bhram</span>
+          <span class="brand-subtitle">United Chemical Industries</span>
+        </span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Open navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#product">Product</a></li>
+          <li class="nav-item"><a class="nav-link" href="#benefits">Benefits</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About UCI</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="hero-kicker reveal"><i class="bi bi-flower1"></i> Premium herbal wellness by UCI</div>
+            <h1 class="reveal">Bhram <span>for everyday vitality.</span></h1>
+            <p class="hero-lead reveal">A nature-inspired wellness product from United Chemical Industries, crafted with botanical care, dependable quality, and a clean premium identity.</p>
+            <div class="hero-actions reveal">
+              <a href="#contact" class="btn btn-brand">Enquire Now <i class="bi bi-arrow-right"></i></a>
+              <a href="#product" class="btn-ghost">View Product <i class="bi bi-box-seam"></i></a>
+            </div>
+
+            <div class="hero-metrics reveal" aria-label="Brand highlights">
+              <div class="metric"><strong>UCI</strong><span>Trusted manufacturer</span></div>
+              <div class="metric"><strong>Pure</strong><span>Botanical identity</span></div>
+              <div class="metric"><strong>Lab</strong><span>Quality focused</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-strip" aria-label="Trust highlights">
+      <div class="container">
+        <div class="trust-panel reveal">
+          <div class="trust-item"><i class="bi bi-patch-check"></i><div><strong>Quality first</strong><span>Batch-conscious standards</span></div></div>
+          <div class="trust-item"><i class="bi bi-leaf"></i><div><strong>Natural appeal</strong><span>Clean botanical positioning</span></div></div>
+          <div class="trust-item"><i class="bi bi-shield-check"></i><div><strong>Carefully packed</strong><span>Professional shelf presence</span></div></div>
+          <div class="trust-item"><i class="bi bi-people"></i><div><strong>Partner ready</strong><span>Retail and bulk enquiries</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section clickable-section" id="product" data-modal-title="The product" data-modal-icon="bi-box-seam" data-modal-text="Bhram brings together a modern product look with an earthy, herbal personality. It is designed to feel premium and natural at the same time, helping the brand stand out on shelves and in customer conversations." data-modal-list="Clean and premium brand identity gives the product immediate shelf presence.|Herbal palette and natural textures create trust without losing sophistication.|Visual storytelling makes product benefits understandable at a glance.|Strong packaging and presentation support retail, distribution, and enquiry conversion.">
+      <div class="container">
+        <div class="product-grid">
+          <div class="product-card reveal" data-modal-title="Signature product" data-modal-icon="bi-stars" data-modal-text="The signature product presentation balances premium design with a natural wellness story. Customers see the item as both authentic and polished from the first glance." data-modal-list="Premium jar and pack styling add product value.|Leaf-inspired cues reinforce the herbal wellness story.|High contrast design keeps the product readable and memorable.|Modern photography improves trust and retail presence.">
+            <div class="floating-badge"><i class="bi bi-stars"></i> Signature product</div>
+            <img src="2.png" alt="UCI Bhram product pack and bottle">
+          </div>
+
+          <div class="reveal">
+            <div class="eyebrow">The product</div>
+            <h2 class="section-title">A polished wellness brand with natural strength.</h2>
+            <p class="section-copy">Bhram brings together a modern product look with an earthy, herbal personality. The result is a confident presentation for customers, distributors, and retail partners.</p>
+
+            <ul class="feature-list">
+              <li><i class="bi bi-flower2"></i><div><strong>Herbal positioning</strong><span>Visual language built around leaves, saffron tones, and natural freshness.</span></div></li>
+              <li><i class="bi bi-gem"></i><div><strong>Premium shelf impact</strong><span>Strong product photography, clean spacing, and focused calls to action.</span></div></li>
+              <li><i class="bi bi-clipboard2-check"></i><div><strong>Business ready</strong><span>Clear sections for quality, process, gallery, and contact information.</span></div></li>
+            </ul>
+
+            <div class="hero-actions">
+              <a href="#contact" class="btn btn-brand">Request Details <i class="bi bi-envelope"></i></a>
+              <a href="#benefits" class="btn-ghost">Explore Benefits</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section benefit-band clickable-section" id="benefits" data-modal-title="Why it stands out" data-modal-icon="bi-stars" data-modal-text="This section explains what makes the brand memorable and trustworthy. It communicates the visual and structural reasons the customer should feel confident about the product and the business behind it." data-modal-list="A clear first impression keeps the product centered in the viewer's mind.|Strong hierarchy makes content easier to process and understand.|Retail-ready presentation builds confidence for buyers and partners.|Responsive design keeps quality consistent across screens and devices.">
+      <div class="container">
+        <div class="reveal">
+          <div class="eyebrow">Why it stands out</div>
+          <h2 class="section-title">Professional presentation for a product rooted in nature.</h2>
+          <p class="section-copy">The new website keeps the brand calm, credible, and attractive while giving visitors the information they need without clutter.</p>
+        </div>
+
+        <div class="benefit-grid">
+          <article class="benefit-card reveal" data-modal-title="Fresh first impression" data-modal-icon="bi-brightness-high" data-modal-text="The hero section immediately frames Bhram as a premium natural product. Customers understand the brand energy and product value without needing extra explanation." data-modal-list="Full-width visuals grab attention from the start.|Hero composition creates instant product focus.|Warm tones communicate purity and premium quality.|Well-structured messaging keeps the page calm and credible."><i class="bi bi-brightness-high"></i><h3>Fresh first impression</h3><p>A full-screen product hero makes Bhram the immediate focus of the website.</p></article>
+          <article class="benefit-card reveal" data-modal-title="Clear hierarchy" data-modal-icon="bi-layout-text-window-reverse" data-modal-text="The page uses spacing, headlines, and rhythm to guide attention. Information remains digestible, allowing customers to understand the product quickly and confidently." data-modal-list="Strong headline structure directs focus with ease.|Compact copy keeps the layout polished and uncluttered.|Visual rhythm supports a refined brand experience.|Content remains readable and easy to scan on any screen."><i class="bi bi-layout-text-window-reverse"></i><h3>Clear hierarchy</h3><p>Sections are easier to scan with strong headlines, compact copy, and visual rhythm.</p></article>
+          <article class="benefit-card reveal" data-modal-title="Retail confidence" data-modal-icon="bi-bag-check" data-modal-text="The store-like presentation helps Bhram feel established and dependable. Product storytelling and gallery visuals support trust for retail buyers and distribution partners." data-modal-list="Gallery visuals help customers inspect product details.|Quality blocks give the brand a more established feel.|Premium layout supports professional shelf perception.|Clear product presentation encourages business interest."><i class="bi bi-bag-check"></i><h3>Retail confidence</h3><p>Product gallery and quality blocks help the brand feel more established.</p></article>
+          <article class="benefit-card reveal" data-modal-title="Mobile polished" data-modal-icon="bi-phone" data-modal-text="Responsive design keeps the experience clean and polished from mobile to desktop. The user journey stays comfortable, premium, and easy to explore regardless of device type." data-modal-list="Layouts adapt smoothly across screens and ratios.|Important information remains legible and accessible.|Device-aware spacing preserves a premium shopping feel.|Mobile experience supports easier enquiry and product discovery."><i class="bi bi-phone"></i><h3>Mobile polished</h3><p>The layout adapts cleanly for phone, tablet, and desktop screens.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about clickable-section" id="about" data-modal-title="About the company" data-modal-icon="bi-building" data-modal-text="United Chemical Industries presents Bhram with a balance of natural warmth and manufacturing credibility. The brand feels authentic, premium, and ready for modern wellness buyers." data-modal-list="Natural warmth creates emotional trust with customers.|Product quality positioning supports a reliable brand story.|Clean design communicates professionalism and care.|Business-ready sections make enquiry conversion easier.">
+      <div class="container">
+        <div class="about-layout">
+          <div class="about-visual reveal">
+            <img src="Home Page.png" alt="UCI Bhram product range">
+            <div class="about-stamp"><strong>UCI</strong><span>United Chemical Industries brings a careful, quality-led approach to herbal product presentation.</span></div>
+          </div>
+
+          <div class="reveal">
+            <div class="eyebrow">About the company</div>
+            <h2 class="section-title">Built for trust, refined for the modern wellness market.</h2>
+            <p class="section-copy">United Chemical Industries presents Bhram with a balance of natural warmth and manufacturing credibility. The website now feels cleaner, more premium, and easier for buyers to act on.</p>
+            <p class="section-copy">From product photography to enquiry flow, each section supports a simple goal: make the brand look dependable, attractive, and ready for business conversations.</p>
+
+            <div class="quality-grid">
+              <div class="quality-point"><i class="bi bi-check2-circle"></i><span>Premium visual identity</span></div>
+              <div class="quality-point"><i class="bi bi-check2-circle"></i><span>Quality-focused messaging</span></div>
+              <div class="quality-point"><i class="bi bi-check2-circle"></i><span>Clean product storytelling</span></div>
+              <div class="quality-point"><i class="bi bi-check2-circle"></i><span>Lead-ready contact flow</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section manufacturing clickable-section" id="manufacturing" data-modal-title="Manufacturing" data-modal-icon="bi-factory" data-modal-text="The manufacturing section translates a natural process into a premium customer story. It highlights careful handling, hygiene, and quality control in a way that feels reassuring and professional." data-modal-list="Natural sourcing signals authenticity and ingredient integrity.|Gentle extraction keeps the product's natural quality intact.|Clean filtration gives the experience a pure, premium finish.|Secure packing helps customers trust the final product.">
+      <div class="container">
+        <div class="manufacturing-layout">
+          <div class="manufacturing-copy reveal">
+            <div class="eyebrow">Manufacturing</div>
+            <h2 class="section-title">Organic honey making process, from natural comb to premium jar.</h2>
+            <p class="section-copy">Bhram honey is presented with a clean, careful process story: natural sourcing, gentle extraction, hygienic filtration, and secure packing. This helps customers feel the purity before they even make an enquiry.</p>
+
+            <ul class="feature-list">
+              <li><i class="bi bi-flower1"></i><div><strong>Natural hive selection</strong><span>Honey is sourced from healthy bee colonies and mature honeycomb frames with attention to aroma, color, and purity.</span></div></li>
+              <li><i class="bi bi-droplet-half"></i><div><strong>Gentle extraction</strong><span>Comb frames are handled carefully so the honey keeps its golden texture, natural sweetness, and rich character.</span></div></li>
+              <li><i class="bi bi-funnel"></i><div><strong>Clean filtration</strong><span>Honey is filtered to remove wax particles while keeping the natural feel customers expect from organic honey.</span></div></li>
+              <li><i class="bi bi-box2-heart"></i><div><strong>Hygienic packing</strong><span>Final filling and sealing are done with a quality-first approach for a polished, trustworthy shelf presence.</span></div></li>
+            </ul>
+
+            <div class="manufacturing-note">
+              <i class="bi bi-award"></i>
+              <div><strong>Customer confidence at first look</strong><span>Warm visuals and clear process points make the brand feel premium, pure, and professionally made.</span></div>
+            </div>
+          </div>
+
+          <div class="manufacturing-visual reveal" aria-label="Organic honey making process images">
+            <figure class="honey-photo">
+              <img src="https://images.unsplash.com/photo-1587049352851-8d4e89133924?auto=format&fit=crop&w=1100&q=82" alt="Golden honeycomb frame used for organic honey making">
+              <figcaption>Natural honeycomb selection</figcaption>
+            </figure>
+            <figure class="honey-photo">
+              <img src="https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?auto=format&fit=crop&w=800&q=82" alt="Fresh honey being prepared for filtration and packing">
+              <figcaption>Gentle extraction and filtering</figcaption>
+            </figure>
+            <figure class="honey-photo">
+              <img src="https://images.unsplash.com/photo-1471943311424-646960669fbc?auto=format&fit=crop&w=800&q=82" alt="Premium honey jars ready for customers">
+              <figcaption>Clean jar filling and sealing</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section clickable-section" id="gallery" data-modal-title="Product gallery" data-modal-icon="bi-images" data-modal-text="The gallery makes product details tangible and real. Customers can inspect packaging, visual cues, and the overall brand personality from multiple angles before making an enquiry." data-modal-list="Multiple product views increase trust and clarity.|Texture and packaging details support premium perception.|Consistent visuals reinforce the brand system.|Gallery presentation helps customers imagine shelf placement and retail value.">
+      <div class="container">
+        <div class="gallery-head reveal">
+          <div>
+            <div class="eyebrow">Product gallery</div>
+            <h2 class="section-title">A closer look at Bhram.</h2>
+          </div>
+          <p class="section-copy mb-0">Large visuals make every product angle feel real, inspectable, and ready for customers.</p>
+        </div>
+
+        <div class="gallery">
+          <figure class="gallery-item reveal" data-modal-title="Signature pack" data-modal-icon="bi-box" data-modal-text="The signature pack reinforces the brand's premium identity with a clean and modern herbal aesthetic. It is made to feel trustworthy, vibrant, and memorable on a shelf." data-modal-list="Premium packaging improves perceived product value.|Leaf-inspired styling introduces a natural botanical feel.|Clean composition keeps the brand modern and elegant.|Visible product cues make the item easy to recognize."><img src="1.png" alt="Bhram product pack and bottle"><figcaption class="gallery-caption"><strong>Signature pack</strong><span>Main product presentation.</span></figcaption></figure>
+          <figure class="gallery-item reveal" data-modal-title="Packaging presence" data-modal-icon="bi-bag-heart" data-modal-text="Packaging is designed to feel mature and premium. The structure, color balance, and herbal references make the product stand out in retail and distributor conversations." data-modal-list="Visual balance adds professionalism to shelf presence.|Natural tones keep the brand relatable and fresh.|Premium spacing creates a more elevated impression.|The packaging supports both trust and standout visibility."><img src="2.png" alt="Bhram product packaging angle"><figcaption class="gallery-caption"><strong>Packaging presence</strong><span>Clean herbal look for retail shelves.</span></figcaption></figure>
+          <figure class="gallery-item reveal" data-modal-title="Natural cues" data-modal-icon="bi-flower2" data-modal-text="Nature-led visuals help the product feel authentic without becoming cluttered. The design subtly conveys freshness, purity, and herbal relevance." data-modal-list="Leaf cues add authenticity to the product message.|Warm colors support wellness and botanical trust.|Balanced design keeps the composition premium and calm.|The mood remains natural while staying commercially strong."><img src="3.png" alt="Bhram product box and bottle"><figcaption class="gallery-caption"><strong>Natural cues</strong><span>Leaf-led freshness and care.</span></figcaption></figure>
+          <figure class="gallery-item reveal" data-modal-title="Brand detail" data-modal-icon="bi-image" data-modal-text="Brand detail focuses on the smaller visual signals that make the product memorable. These cues help set Bhram apart as a more refined wellness offer." data-modal-list="Strong identity details improve recognition quickly.|Subtle design elements give the brand a premium finish.|The layout keeps attention on the product and message.|Every visual cue contributes to trust and recall."><img src="4.png" alt="Bhram wellness product display"><figcaption class="gallery-caption"><strong>Brand detail</strong><span>Focused, memorable visual identity.</span></figcaption></figure>
+          <figure class="gallery-item reveal" data-modal-title="Full design" data-modal-icon="bi-grid-1x2" data-modal-text="The full pack design combines product clarity with premium positioning. It helps the brand feel complete, polished, and well thought through from every angle." data-modal-list="Complete visuals support stronger product storytelling.|Layout consistency makes the brand look intentional.|Premium framing gives buyers more confidence.|Packaging works across digital and retail contexts."><img src="5.png" alt="Bhram full packaging design"><figcaption class="gallery-caption"><strong>Full design</strong><span>Complete product-facing presentation.</span></figcaption></figure>
+          <figure class="gallery-item reveal" data-modal-title="Label system" data-modal-icon="bi-tag" data-modal-text="A consistent label system helps customers recognize the product and understand its key benefits quickly. This matters in both retail and distributor selling environments." data-modal-list="Clear labelling improves quick product comprehension.|Strong text hierarchy keeps the key message visible.|Professional continuity reinforces product confidence.|Useful packaging cues make the offer easier to trust."><img src="6.png" alt="Bhram product label design"><figcaption class="gallery-caption"><strong>Label system</strong><span>Consistent pack communication.</span></figcaption></figure>
+          <figure class="gallery-item reveal" data-modal-title="Product focus" data-modal-icon="bi-bullseye" data-modal-text="The visual focus keeps the product centered and premium. This makes the brand feel more intentional and direct in the buyer's mind." data-modal-list="Product-first visuals reduce clutter and distraction.|Strong framing keeps attention on the item.|Premium presentation makes the offer feel valuable.|Clear focus supports better customer recall and interest."><img src="7.png" alt="Bhram product lifestyle visual"><figcaption class="gallery-caption"><strong>Product focus</strong><span>Sharp, customer-facing product visual.</span></figcaption></figure>
+          <figure class="gallery-item reveal" data-modal-title="Range view" data-modal-icon="bi-collection" data-modal-text="The range view shows consistency across the full product set. Customers can immediately understand the brand system and how the product fits into a broader wellness line." data-modal-list="Range consistency strengthens overall brand credibility.|Shared styling creates a cohesive visual system.|Product unity helps buyers perceive scale and trust.|The range feels organized, premium, and ready for growth."><img src="8.png" alt="Bhram product range visual"><figcaption class="gallery-caption"><strong>Range view</strong><span>Consistent visuals across the set.</span></figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section process clickable-section" id="process" data-modal-title="Quality flow" data-modal-icon="bi-arrow-repeat" data-modal-text="The quality flow explains the brand in a simple, credible sequence. It keeps the story easy to understand while preserving confidence and professionalism." data-modal-list="Source with care creates trust in origin and ingredients.|Process consistency signals manufacturing discipline.|Professional presentation makes the brand easier to evaluate.|Clear steps support confidence before customer action.">
+      <div class="container">
+        <div class="reveal">
+          <div class="eyebrow">Quality flow</div>
+          <h2 class="section-title">Simple, credible, and easy to understand.</h2>
+          <p class="section-copy">The process cards create a professional narrative without overwhelming visitors with too much technical language.</p>
+        </div>
+
+        <div class="process-grid">
+          <article class="process-card reveal" data-modal-title="Source with care" data-modal-icon="bi-flower1" data-modal-text="Natural ingredient positioning builds authenticity and trust. The story feels more grounded, warm, and honest while still supporting a premium image." data-modal-list="Origin cues add trust to the product story.|Natural references feel relevant and credible.|The narrative stays simple yet premium.|Customers can connect quickly with the product's purpose."><span class="process-number">01</span><h3>Source with care</h3><p>Natural ingredient positioning and clean packaging cues help communicate a careful origin story.</p></article>
+          <article class="process-card reveal" data-modal-title="Prepare with standards" data-modal-icon="bi-check2-circle" data-modal-text="Careful preparation and quality standards reassure buyers. The process communicates that the product is reliable, intentional, and built for customer confidence." data-modal-list="Quality messaging supports trust and reassurance.|Standardized handling strengthens credibility.|Customers see professionalism behind the product.|The brand feels dependable before purchase conversations begin."><span class="process-number">02</span><h3>Prepare with standards</h3><p>Quality-led messaging helps customers and partners see the product as dependable.</p></article>
+          <article class="process-card reveal" data-modal-title="Present with confidence" data-modal-icon="bi-bullseye" data-modal-text="Strong imagery, focused calls to action, and clear layout make product value easy to grasp. This helps visitors move from interest to enquiry without friction." data-modal-list="A polished layout supports product understanding.|Clear CTAs create action paths for buyers.|Professional visuals improve confidence and recall.|The final presentation encourages conversion and trust."><span class="process-number">03</span><h3>Present with confidence</h3><p>Strong images, clear CTAs, and a polished layout make enquiries easier to generate.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="contact-panel reveal">
+          <div class="contact-copy">
+            <div class="eyebrow">Contact</div>
+            <h2 class="section-title">Ready to discuss Bhram?</h2>
+            <p class="section-copy">Use this section for distributorship, retail, bulk purchase, or general product enquiries from United Chemical Industries.</p>
+            <div class="contact-actions">
+              <a href="mailto:info@uci-bhram.com" class="btn btn-brand">Email Enquiry <i class="bi bi-envelope"></i></a>
+              <a href="tel:+911234567890" class="btn-ghost">Call Now <i class="bi bi-telephone"></i></a>
+            </div>
+          </div>
+
+          <div class="contact-details">
+            <div class="contact-row"><i class="bi bi-envelope"></i><div><strong>Email</strong><a href="mailto:info@uci-bhram.com">info@uci-bhram.com</a></div></div>
+            <div class="contact-row"><i class="bi bi-telephone"></i><div><strong>Phone</strong><a href="tel:+911234567890">+91 12345 67890</a></div></div>
+            <div class="contact-row"><i class="bi bi-geo-alt"></i><div><strong>Office</strong><span>United Chemical Industries, India</span></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <button class="back-to-top" type="button" aria-label="Back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <div class="section-modal" id="sectionModal" aria-hidden="true">
+    <div class="section-modal-backdrop" data-close-modal="true"></div>
+    <div class="section-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="sectionModalTitle">
+      <button class="section-modal-close" type="button" aria-label="Close">&times;</button>
+      <div class="section-modal-header">
+        <div class="section-modal-icon"><i id="sectionModalIcon" class="bi"></i></div>
+        <div>
+          <div class="section-modal-kicker">Section details</div>
+          <h3 id="sectionModalTitle">Section title</h3>
+        </div>
+      </div>
+      <div class="section-modal-body">
+        <p id="sectionModalText"></p>
+        <ul class="section-modal-list" id="sectionModalList"></ul>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="footer-brand" href="#home"><img class="brand-logo" src="UCI Logo.jpg" alt="United Chemical Industries logo"><span>Bhram</span></a>
+          <p>Premium herbal wellness presentation by United Chemical Industries. Purity of nature, presented with professional confidence.</p>
+        </div>
+        <div>
+          <h3>Explore</h3>
+          <ul class="footer-links">
+            <li><a href="#product">Product</a></li>
+            <li><a href="#benefits">Benefits</a></li>
+            <li><a href="#about">About UCI</a></li>
+            <li><a href="#manufacturing">Manufacturing</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Connect</h3>
+          <ul class="footer-links">
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="mailto:info@uci-bhram.com">Email</a></li>
+            <li><a href="tel:+911234567890">Phone</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>Copyright 2026 United Chemical Industries. All rights reserved.</span>
+        <span>Designed for Bhram wellness enquiries.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    (function () {
+      const navLinks = document.querySelectorAll(".nav-link");
+      const sections = document.querySelectorAll("main section[id]");
+      const backToTop = document.querySelector(".back-to-top");
+
+      function setActiveLink() {
+        const scrollPosition = window.scrollY + 130;
+        let activeId = "home";
+
+        sections.forEach(function (section) {
+          const top = section.offsetTop;
+          const bottom = top + section.offsetHeight;
+          if (scrollPosition >= top && scrollPosition < bottom) {
+            activeId = section.id;
+          }
+        });
+
+        navLinks.forEach(function (link) {
+          link.classList.toggle("active", link.getAttribute("href") === "#" + activeId);
+        });
+      }
+
+      const reveals = document.querySelectorAll(".reveal");
+      if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12 });
+
+        reveals.forEach(function (item) { observer.observe(item); });
+      } else {
+        reveals.forEach(function (item) { item.classList.add("is-visible"); });
+      }
+
+      navLinks.forEach(function (link) {
+        link.addEventListener("click", function () {
+          const menu = document.getElementById("mainNav");
+          if (window.bootstrap && menu) {
+            const collapse = bootstrap.Collapse.getInstance(menu);
+            if (collapse) { collapse.hide(); }
+          }
+        });
+      });
+
+      if (backToTop) {
+        backToTop.addEventListener("click", function () {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+      }
+
+      function toggleBackToTop() {
+        if (backToTop) {
+          backToTop.classList.toggle("is-visible", window.scrollY > 420);
+        }
+      }
+
+      const modal = document.getElementById("sectionModal");
+      const modalTitle = document.getElementById("sectionModalTitle");
+      const modalText = document.getElementById("sectionModalText");
+      const modalList = document.getElementById("sectionModalList");
+      const modalIcon = document.getElementById("sectionModalIcon");
+      const closeModalButton = document.querySelector(".section-modal-close");
+
+      function openSectionModal(trigger) {
+        if (!modal || !trigger) return;
+
+        modalTitle.textContent = trigger.dataset.modalTitle || "Section details";
+        modalText.textContent = trigger.dataset.modalText || "Details for this section will appear here.";
+        modalIcon.className = "bi " + (trigger.dataset.modalIcon || "bi-info-circle");
+
+        const items = (trigger.dataset.modalList || "").split("|").filter(Boolean);
+        modalList.innerHTML = items.map(function (item) {
+          return '<li><i class="bi bi-check2-circle"></i><span>' + item + '</span></li>';
+        }).join("");
+
+        modal.classList.add("is-open");
+        modal.setAttribute("aria-hidden", "false");
+        document.body.classList.add("modal-open");
+      }
+
+      function closeSectionModal() {
+        if (!modal) return;
+        modal.classList.remove("is-open");
+        modal.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("modal-open");
+      }
+
+      document.querySelectorAll("[data-modal-title]").forEach(function (trigger) {
+        trigger.setAttribute("tabindex", "0");
+        trigger.addEventListener("click", function () {
+          openSectionModal(trigger);
+        });
+        trigger.addEventListener("keydown", function (event) {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            openSectionModal(trigger);
+          }
+        });
+      });
+
+      if (closeModalButton) {
+        closeModalButton.addEventListener("click", closeSectionModal);
+      }
+
+      if (modal) {
+        modal.addEventListener("click", function (event) {
+          if (event.target.matches("[data-close-modal='true']") || event.target === modal) {
+            closeSectionModal();
+          }
+        });
+      }
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape" && modal && modal.classList.contains("is-open")) {
+          closeSectionModal();
+        }
+      });
+
+      window.addEventListener("scroll", setActiveLink, { passive: true });
+      window.addEventListener("scroll", toggleBackToTop, { passive: true });
+      window.addEventListener("load", setActiveLink);
+      window.addEventListener("load", toggleBackToTop);
+    })();
+  </script>
+</body>
+</html>
